@@ -16,8 +16,6 @@ This is a demonstration of a basic e-commerce application built with the Laravel
       * **Product Management**:
           * **Add New Products**: Form to add product details (name, description, price, image URL) to the database.
           * **Delete Existing Products**: Ability to remove products from the inventory.
-  * **Dark Theme**: A sleek, modern dark mode applied across both the storefront and the admin panel for enhanced aesthetics.
-
 -----
 
 ## 🚀 Technologies Used
@@ -47,15 +45,11 @@ Follow these steps to get the project up and running on your local machine.
 
 ### Installation Steps
 
-1.  **Clone the Repository** (or create a new Laravel project and copy files):
+1.  **Clone the Repository**:
 
     ```bash
-    # If you cloned an existing project:
-    git clone https://github.com/your-repo/ecommerce-laravel.git
+    git clone https://github.com/shemankubana/PHPantry-
     cd ecommerce-laravel
-
-    # If you started a new Laravel project as per previous instructions:
-    # (assuming you are already in the 'ecommerce-laravel' directory)
     ```
 
 2.  **Install Composer Dependencies**:
@@ -99,11 +93,6 @@ Follow these steps to get the project up and running on your local machine.
         ```bash
         php artisan migrate
         ```
-      * (Optional) **Seed Sample Products**: If you haven't manually inserted products via SQL, you can create a seeder to add sample data:
-          * Create a seeder: `php artisan make:seeder ProductSeeder`
-          * Edit `database/seeders/ProductSeeder.php`
-          * Run the seeder: `php artisan db:seed --class=ProductSeeder`
-
 -----
 
 ## ▶️ Running the Application
@@ -142,7 +131,7 @@ For demonstration purposes, a simple hardcoded login is used:
   * **Order Management**: Create database tables and logic to persist orders after checkout, allowing admins to view order history.
   * **Product Categories**: Add categories to products for better organization and filtering.
   * **Search & Filtering**: Implement search functionality and filters for products.
-  * **Payment Gateway Integration**: Integrate with real payment processors (e.g., Stripe, PayPal).
+  * **Payment Gateway Integration**: Integrate with real payment processors (e.g., Stripe, Flutterwave).
   * **Improved Cart Management**: Allow users to update product quantities in the cart.
   * **Testing**: Add more comprehensive unit and feature tests using PHPUnit.
   * **Frontend Framework**: Integrate a JavaScript framework like Vue.js or React for a more dynamic and interactive user interface.
