@@ -19,7 +19,7 @@ RUN docker-php-ext-install pdo_pgsql
 # Install GD extension for image processing (common for Laravel apps)
 # This will allow Laravel to use image manipulation libraries if you add them later.
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp \
-    && docker-php-ext_install -j$(nproc) gd
+    && docker-php-ext-install -j$(nproc) gd # <--- Corrected: hyphen instead of underscore
 
 # Install other PHP extensions if needed (e.g., zip, bcmath, exif)
 RUN docker-php-ext-install zip bcmath exif opcache
