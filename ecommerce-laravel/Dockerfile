@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
     libpng-dev \
     libjpeg-dev \
     libwebp-dev \
-    libfreetype6-dev \  # <--- ADD THIS LINE
+    libfreetype6-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Install PDO_PGSQL extension for PostgreSQL
