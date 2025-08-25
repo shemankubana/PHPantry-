@@ -1,9 +1,7 @@
-# Start with a base PHP image with Apache (or FPM, but Apache is simpler for a quick demo)
-# Using a specific PHP version (e.g., 8.2-apache) is a good practice.
+# Start with a base PHP image with Apache
 FROM php:8.2-apache
 
-# Install system dependencies needed for Laravel
-# gd (for image manipulation), pdo_pgsql (for PostgreSQL), zip (for composer)
+# Install system dependencies needed for Laravel, including libfreetype6-dev
 RUN apt-get update && apt-get install -y \
     libpq-dev \
     libzip-dev \
@@ -12,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     libpng-dev \
     libjpeg-dev \
     libwebp-dev \
+    libfreetype6-dev \  # <--- ADD THIS LINE
     && rm -rf /var/lib/apt/lists/*
 
 # Install PDO_PGSQL extension for PostgreSQL
@@ -26,8 +25,6 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp \
 RUN docker-php-ext-install zip bcmath exif opcache
 
 # Set Apache document root to Laravel's public directory
-# This assumes you are starting with a base Apache image.
-# If using FPM, you'd configure Nginx/Apache separately.
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
 RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
@@ -46,7 +43,6 @@ COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 RUN composer install --no-dev --optimize-autoloader
 
 # Set appropriate permissions for Laravel's storage and bootstrap/cache directories
-# The www-data user/group is the default for Apache in this base image.
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 RUN chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 
@@ -55,4 +51,3 @@ EXPOSE 80
 
 # The default command for php:8.2-apache image starts Apache
 CMD ["apache2-foreground"]
-
