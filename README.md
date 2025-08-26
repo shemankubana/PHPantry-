@@ -1,10 +1,10 @@
 # My Simple Laravel E-commerce Project: PHPantry 🛒
 
-Hey there\! 👋 This is a little e-commerce demonstration project I put together using the **Laravel PHP framework**. My goal was to build something that showcases the fundamental backend concepts I've been learning, and I think it turned out pretty well\! You'll find a public storefront where folks can browse and "buy" products, and also a neat admin panel where I can manage all the inventory.
+This is a little e-commerce demonstration project I put together using the **Laravel PHP framework**. My goal was to build something that showcases the fundamental backend concepts I've been learning, and I think it turned out pretty well\! You'll find a public storefront where folks can browse and "buy" products, and also a neat admin panel where I can manage all the inventory.
 
 -----
 
-## ✨ What It Does (Features\!)
+## What It Does (Features\!)
 
 I focused on getting these core functionalities working:
 
@@ -20,7 +20,7 @@ I focused on getting these core functionalities working:
 
 -----
 
-## 🚀 The Tech Stack I Used
+## The Tech Stack I Used
 
 I built this project to really dive into some key technologies:
 
@@ -114,18 +114,12 @@ You'll need these installed first:
 
     This usually starts the server at `http://127.0.0.1:8000`.
 
-2.  **Access the Storefront**:
-    Open your web browser and go to: `http://127.0.0.1:8000`
-
-3.  **Access the Admin Panel**:
-    Open your web browser and go to: `http://127.0.0.1:8000/admin`
 
 ### Deployed on Render\!
 
 I've also deployed this project live on Render\! You can check it out publicly here:
 
-  * **Render Deployment URL**: [https://phpantry.onrender.com/](https://phpantry.onrender.com/)
-  * **Admin Panel (on Render)**: [https://phpantry.onrender.com/admin](https://phpantry.onrender.com/admin)
+  * **Render Deployment URL**: [https://phpantry.onrender.com/](https://phpantry.onrender.com)
 
 -----
 
@@ -136,20 +130,4 @@ To log into the admin panel (both locally and on Render), use these credentials:
   * **Username**: `admin`
   * **Password**: `password`
 
-*Just a heads-up: In a real application, I'd definitely implement robust user registration, password hashing, and much stronger security measures\!*
-
 -----
-
-## 💡 What I Want to Do Next (Future Enhancements)
-
-I've got a lot of ideas for how to expand this project. Here are a few things I'd like to add:
-
-  * **Proper User Auth**: Implement Laravel's full authentication system (like Breeze or Jetstream) for real user accounts and roles.
-  * **Image Uploads**: Instead of external image links, I'd love to implement actual image uploads to local storage or cloud services like AWS S3.
-  * **Order Management**: Build out a system to store and track customer orders in the database, letting admins view order history.
-  * **Product Categories**: Organize products into categories for easier browsing.
-  * **Search & Filtering**: Implement search functionality and filters to help users find what they're looking for.
-  * **Payment Gateway Integration**: Integrate with a real payment processor (like Stripe or Flutterwave) for actual transactions.
-  * **Improved Cart**: Allow users to update product quantities directly in the cart.
-  * **More Testing**: Write more comprehensive unit and feature tests using PHPUnit.
-  * **Frontend Framework**: Explore integrating a JavaScript framework like Vue.js or React for a more dynamic UI.
