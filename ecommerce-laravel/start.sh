@@ -1,8 +1,8 @@
 #!/bin/sh
 set -e
 
-# Run Laravel migrations
+echo "Running Laravel migrations..."
 php /var/www/html/artisan migrate --force
 
-# Start Apache in foreground
+echo "Starting Apache..."
 exec apache2-foreground
