@@ -36,7 +36,7 @@ I built this project to really dive into some key technologies:
 
 -----
 
-## 🛠️ How to Get It Running on Your Machine (Local Setup)
+## How to Get It Running on Your Machine (Local Setup)
 
 Want to play around with it locally? Here's how you can get my project up and running:
 
@@ -102,7 +102,7 @@ You'll need these installed first:
 
 -----
 
-## ▶️ How to See It Live (Local & Deployed)
+## How to See It Live (Local & Deployed)
 
 ### Locally
 
@@ -123,7 +123,7 @@ I've also deployed this project live on Render\! You can check it out publicly h
 
 -----
 
-## 🔒 Admin Panel Credentials
+## Admin Panel Credentials
 
 To log into the admin panel (both locally and on Render), use these credentials:
 
