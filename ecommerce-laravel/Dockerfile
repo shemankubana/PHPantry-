@@ -51,3 +51,14 @@ EXPOSE 80
 
 # The default command for php:8.2-apache image starts Apache
 CMD ["apache2-foreground"]
+
+# Copy the start script and make it executable
+COPY start.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/start.sh
+
+# Add the wait-for-it script to the image
+# It is a good practice to use a multi-stage build for this
+# ... (Example multi-stage build step to copy the script)
+
+# Set the entrypoint to the start script
+ENTRYPOINT ["/usr/local/bin/start.sh"]
